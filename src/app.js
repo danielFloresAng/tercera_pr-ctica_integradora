@@ -18,6 +18,7 @@ import sessionsRouter from "./routes/session.routes.js";
 import authsRouter from "./routes/auth.routes.js";
 import initializePassport from "./configs/passport.config.js";
 import baseRouter from "./routes/base.routes.js";
+import orderRouter from "./routes/orders.routes.js";
 
 const app = express();
 
@@ -63,6 +64,7 @@ app.use("/api/cookies", cookiesRouter);
 app.use("/api/sessions", sessionsRouter);
 app.use("/api/auth", authsRouter);
 app.use("/api/base", baseRouter);
+app.use("/api/orders", orderRouter);
 app.use("/static", express.static(`${config.DIRNAME}/public`));
 
 //01.28.00
